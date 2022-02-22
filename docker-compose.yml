@@ -5,3 +5,8 @@ services:
         build:
             context: .
             dockerfile: ./docker/php-fpm/Dockerfile
+
+    nginx:
+        image: nginx:1.21-alpine
+        depends_on:
+            - php-fpm

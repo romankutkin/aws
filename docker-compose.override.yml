@@ -4,3 +4,10 @@ services:
     php-fpm:
         volumes:
             - ./:/usr/share/nginx/html
+
+    nginx:
+        ports:
+            - "80:80"
+        volumes:
+            - ./public:/usr/share/nginx/html/public:ro
+            - ./docker/nginx/conf.d:/etc/nginx/conf.d:ro
