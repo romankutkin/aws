@@ -11,3 +11,7 @@ services:
         volumes:
             - ./public:/usr/share/nginx/html/public:ro
             - ./docker/nginx/conf.d:/etc/nginx/conf.d:ro
+
+    postgres:
+        ports:
+            - "5432:5432"
